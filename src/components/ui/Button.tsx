@@ -26,12 +26,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const Comp: ElementType = asChild ? Slot : "button";
 
-    // Gestion propre de asChild
     const content = asChild ? (
-      // Avec asChild → on passe tout au Slot (un seul enfant obligatoire)
       React.Children.only(children)
     ) : (
-      // Sans asChild → comportement normal
       <>
         {icon && <span className={variant === "icon" ? "text-xl" : ""}>{icon}</span>}
         {children}
