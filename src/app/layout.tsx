@@ -17,10 +17,18 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "RED•ACTED | Modern Fullstack Developer",
-  description: "Crafting premium digital experiences with intent. Fullstack developer specialized in high-performance SaaS products.",
-  keywords: ["developer", "fullstack", "react", "next.js", "typescript", "portfolio"],
-  authors: [{ name: "RED•ACTED" }],
+  title: "Kali Tao - Votre carrière online pour le monde de caterers",
+  description: "Rejoignez la plateforme dédiée aux professionnels de la restauration et du catering. Gérez votre carrière, vos missions et votre entreprise en toute simplicité.",
+  keywords: ["catering", "caterers", "restauration", "emploi catering", "mission traiteur", "kali tao", "professionnel catering"],
+  authors: [{ name: "Kali Tao" }],
+  icons: {
+    icon: "/favicon.ico",         
+    shortcut: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Kali Tao - Votre carrière online pour le monde de caterers",
+    description: "La plateforme ultime pour les professionnels du catering et de la restauration.",
+  },
 };
 
 export default function RootLayout({
@@ -31,9 +39,9 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${rubik.variable} 
-                   font-sans antialiased 
-                   bg-background text-foreground 
+        className={`${inter.variable} ${rubik.variable}
+                   font-sans antialiased
+                   bg-background text-foreground
                    selection:bg-primary selection:text-white`}
       >
         {children}
